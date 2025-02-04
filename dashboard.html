@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard do Cliente</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 600px;
+            margin: auto;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 { color: #333; }
+        p { font-size: 16px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Dashboard do Cliente</h1>
+        <p><strong>Nome:</strong> {{ customer.name or "Não informado" }}</p>
+        <p><strong>Email:</strong> {{ customer.email or "Não informado" }}</p>
+        <p><strong>ID do Cliente:</strong> {{ customer.id }}</p>
+        <p><strong>Status:</strong> {{ customer.metadata.status or "Não definido" }}</p>
+        <!-- Você pode incluir outras informações relevantes da Stripe aqui -->
+    </div>
+</body>
+</html>
